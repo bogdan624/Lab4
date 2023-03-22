@@ -16,13 +16,9 @@ int main()
         scanf("%d",&val);
         addAtEnd(&lista,val);
     }
-    Node* aux=lista;
-    int s=0;
-    while(aux!=NULL){
-        s=s+aux->val;
-        aux=aux->next;
-    }
-    modificare_lista(&lista,s);
+    modificare_lista(&lista);
+    display(lista);
+    adaugare_element(&lista,2,7);
     display(lista);
     return 0;
 }

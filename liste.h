@@ -11,4 +11,5 @@ void addAtBeginning(Node **, Data );
 void addAtEnd(Node** , Data );
 void display(Node *);
 void modificare_element(Node **, int ,int);
-void modificare_lista(Node **,int);
+void modificare_lista(Node **);
+void adaugare_element(Node **,int , int );

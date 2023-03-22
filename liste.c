@@ -39,13 +39,41 @@ void modificare_element(Node **head, int val,int poz){
         aux=aux->next;
     }
 }
-void modificare_lista(Node **head,int sum){
+void modificare_lista(Node **head){
     int nr;
+    int s=0;
     Node* aux=*head;
     while(aux!=NULL){
-        nr=aux->val;
-        aux->val=sum;
-        sum=sum-nr;
+        s=s+aux->val;
         aux=aux->next;
     }
+    Node* aux1=*head;
+    while(aux1!=NULL){
+        nr=aux1->val;
+        aux1->val=s;
+        s=s-nr;
+        aux1=aux1->next;
+    }
+}
+void adaugare_element(Node **head,int poz, int val){
+    Node *aux=*head;
+    int nr=1;
+    while(nr<poz){
+        aux->val=aux->val+val;
+        aux=aux->next;
+        nr++;
+    }
+    aux->val=aux->val+val;
+    Node* temp;
+    temp=aux->next;
+    Node* newNode = (Node*)malloc(sizeof(Node));
+	newNode->val = val;
+	aux->next=newNode;
+    aux->next->next=temp;
+    aux=*head;
+    while(aux->val!=val){
+        aux=aux->next;
+    }
+    aux->val=aux->val+aux->next->val;
+    aux=aux->next;
 }
