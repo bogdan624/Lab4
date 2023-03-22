@@ -39,3 +39,13 @@ void modificare_element(Node **head, int val,int poz){
         aux=aux->next;
     }
 }
+void modificare_lista(Node **head,int sum){
+    int nr;
+    Node* aux=*head;
+    while(aux!=NULL){
+        nr=aux->val;
+        aux->val=sum;
+        sum=sum-nr;
+        aux=aux->next;
+    }
+}
