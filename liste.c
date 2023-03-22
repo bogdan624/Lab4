@@ -29,4 +29,13 @@ void display(Node *head)
 	}
 	printf("\n");
 }
-
+void modificare_element(Node **head, int val,int poz){
+    int nr=0;
+    Node *aux=*head;
+    while(aux!=NULL){
+        nr++;
+        if(nr==poz)
+            aux->val=val;
+        aux=aux->next;
+    }
+}
