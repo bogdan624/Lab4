@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1679473699 source:c:\users\bogdan\desktop\lab4 pa\lab4\main.c
+	"liste.h"
+
+1679473442 source:c:\users\bogdan\desktop\lab4 pa\lab4\liste.c
+	"liste.h"
+
+1679473494 c:\users\bogdan\desktop\lab4 pa\lab4\liste.h
+	<stdio.h>
+	<stdlib.h>
+
